@@ -1,0 +1,39 @@
+/* STREAMING_CHUNK:Defining root CSS variables for light theme */
+:root {
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-color: #1e293b;
+    --muted-text: #64748b;
+    --border-color: #e2e8f0;
+    --input-bg: #ffffff;
+    --button-bg: #f1f5f9;
+    --button-text: #334155;
+}
+
+/* STREAMING_CHUNK:Defining dark theme variables on body.dark */
+body.dark {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --muted-text: #94a3b8;
+    --border-color: #334155;
+    --input-bg: #0f172a;
+    --button-bg: #334155;
+    --button-text: #f8fafc;
+}
+
+/* STREAMING_CHUNK:Applying base theme rules */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* STREAMING_CHUNK:Defining warning and over state classes for character counter */
+.warning {
+    color: #f97316 !important; /* Orange text */
+}
+
+.over {
+    color: #ef4444 !important; /* Red, bold text */
+    font-weight: bold !important;
+}

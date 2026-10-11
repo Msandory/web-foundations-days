@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 - Note App Assignment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen transition-colors duration-300 flex flex-col justify-between font-sans">
+
+    <header class="w-full shadow-md p-4 flex justify-between items-center" style="background-color: var(--card-bg); border-bottom: 1px solid var(--border-color);">
+        <div class="flex items-center space-x-2">
+            <span class="text-xl font-bold" style="color: var(--text-color);">📝 Day 4 Assignment</span>
+          
+        </div>
+        <button id="theme-toggle" class="px-4 py-2 rounded-lg font-medium text-sm transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" style="background-color: var(--button-bg); color: var(--button-text);">
+            Dark mode
+        </button>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center p-4 sm:p-6">
+        <div class="w-full max-w-2xl rounded-2xl shadow-xl p-6 sm:p-8 transition-all" style="background-color: var(--card-bg); border: 1px solid var(--border-color);">
+            <h1 class="text-2xl font-bold mb-2" style="color: var(--text-color);">Scratchpad Note App</h1>
+            <p class="text-sm mb-6" style="color: var(--muted-text);">Type your notes below. Autosaves as you type. Max limit is 200 characters.</p>
+
+            <!-- Label and Textarea -->
+            <div class="mb-4">
+                <label for="note-text" class="block text-sm font-semibold mb-2" style="color: var(--text-color);">Your Note:</label>
+                <textarea id="note-text" rows="6" placeholder="Start typing your note here... (Press Escape to clear)" class="w-full p-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-y text-base" style="background-color: var(--input-bg); color: var(--text-color); border-color: var(--border-color);"></textarea>
+            </div>
+
+            <!-- Counters and Actions -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+                <div class="space-y-1">
+                    <p id="char-count" class="text-sm font-medium" style="color: var(--text-color);">0 / 200 characters</p>
+                    <p id="word-count" class="text-sm font-medium" style="color: var(--muted-text);">0 words</p>
+                </div>
+                <button id="clear-btn" class="w-full sm:w-auto px-5 py-2.5 rounded-xl font-medium text-sm bg-red-500 hover:bg-red-600 text-white transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-red-400">
+                    Clear Note
+                </button>
+            </div>
+
+            
+           
+        </div>
+    </main>
+
+
+    <script src="script.js" defer></script>
+    
+</body>
+</html>

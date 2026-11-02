@@ -1,0 +1,7 @@
+# Reflection
+
+**The most difficult concept and how I overcame it.** The hardest concept for me was concurrency: understanding how two requests can pass the same "is this free?" check at the same moment. I was used to thinking of code running one step at a time. I overcame it by drawing the timeline of two users hitting the same row, and then seeing why one atomic `UPDATE ... WHERE status = 'AVAILABLE'` inside a transaction fixes what a separate SELECT and UPDATE cannot. Working through the TicketHub double-booking problem made it concrete, and I now also see constraints like UNIQUE as a safety net behind my code.
+
+**What I would improve in my capstone.** Based on the feedback I received, I would improve my documentation and explain my design decisions more clearly. My API, data model and architecture documents described what I built, but not always why I chose it or what the alternatives were. I would add a short trade-offs section, state my assumptions about traffic, and describe how errors and edge cases are handled. I would also make the diagrams easier to follow by explaining each component in one or two sentences.
+
+**What I will learn next.** Next I want to go deeper on databases and system design in practice: indexing, caching with Redis, and message queues. I also want to build and deploy a small project end to end, with automated tests and a CI pipeline, so I can try these ideas under real load instead of only on paper.
